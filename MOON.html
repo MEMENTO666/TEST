@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOON</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    
+    
+    .container {
+      width:100vw;
+      height:100vh;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+    .main {
+      width:400px;
+      height: 900px;
+      background-color: #061328;
+      border-radius: 20px 20px 0px 0px
+      
+    }
+    
+    .head {
+      width:400px;
+      height:40px;
+      /* border: 1px solid black; */
+      display: flex;
+      justify-content: space-between;
+
+      
+    }
+    
+    .head div {
+      width:40px;
+      height:40px;
+      background-color: #3c5886;
+      border-radius: 50%;
+      
+    }
+    
+    .head2 {
+      width:400px;
+      height:40px;
+      /* border:1px solid black; */
+      display: flex;
+      /* justify-content: space-between; */
+      justify-content: flex-start;
+    }
+    
+    .head2  div{
+      width:90px;
+      height:40px;
+      background-color: #061328;
+      
+    }
+    
+    .head2 div:nth-child(2) {position: relative; left:80px;}
+
+
+    .head2 p {color: white; font-weight: bolder;}
+
+    .moon {
+      width:400px;
+      height:300px;
+      background-color:#061328;  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+      
+    }
+    
+    .moon div:nth-child(1)  {
+     
+      width:80px;
+      height:80px;
+      background-color: #f7e545;
+      border-radius: 50%;
+      box-shadow: 1px 7px 7px 0px; }
+      
+      
+    
+    .moon div:nth-child(1) div {
+      width:60px;
+      height:60px;
+      background-color:#061328;
+      border-radius: 50%;
+       }
+              /* 초승달로 만들어볼거임 */
+      
+      
+
+    .moon div:nth-child(2) {
+      width:250px;
+      height: 50px;
+      /* background-color: aliceblue; */
+      margin-top: 15%;
+      border-radius: 50px;
+      border: 2px solid white;
+    }
+    
+    .center {
+      width:400px;
+      height:240px;
+      background-color: #061328; 
+      
+    }
+    
+    .center div:nth-child(1) {
+      width:400px;
+      height:40px;
+      /* border:1px solid black; */
+      
+    }
+    
+    .center div:nth-child(2) {
+      width:400px;
+      height:200px;
+      /* border:1px solid black; */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      
+      
+    }
+    
+    .center div:nth-child(2) div {
+      width:80px;
+      height:80px;
+      /* border:1px solid aqua; */
+      margin:15px;
+      border-radius: 50%;
+      background-color: #284779;
+      border:2px solid #f7e545;
+      box-shadow: 8px 8px;
+      color: #f7e545;
+      
+    }
+    
+    .center p {
+      color: white;
+      font-weight: bolder;
+    }
+    
+    .bottom div:nth-child(1) {
+      width:400px;
+      height:50px;
+      background-color: #36445a;
+      
+      
+    }
+    .bottom div:nth-child(2) {
+      width:100px;
+      height:50px;
+      /* border:1px solid black; */
+      color: white;
+      margin-left:25%
+      
+    }
+    .bottom div:nth-child(3) {
+      width:100px;
+      height:50px;
+      margin-top:2%;   
+      color: yellow;
+      margin-left:25%
+
+    }
+    .bottom div:nth-child(4) {
+      width:100px;
+      height:50px;
+      /* border:1px solid black; */
+      margin-top:2%;      
+      color: white;
+      margin-left:25%
+      
+    }
+  
+    .bar {
+      width:370px;
+      height:50px;
+      background-color:#304568;
+      position: absolute;
+      bottom:14%;
+      opacity: 0.6;
+      margin-left: 17px;
+      border-radius: 50px;
+      
+    }
+    
+
+
+
+    .bottom p {
+      font-weight: bolder;
+      color: rgb(245, 241, 13);
+      
+    }
+    
+    .footer {
+      width:400px;
+      height:64px;
+      background-color: #284779;
+      border-radius: 40px 40px 0px 0px;
+    }
+    
+    .footer p {
+      font-weight: bolder; color: #f7e545;
+      text-align: center; 
+      font-size: 35px;
+    }
+    
+    
+    
+    
+  </style>
+  
+  
+  
+  
+  
+  
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <div class="head">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="head2">
+        <div></div>
+        <div><p>MONDAY</p></div>
+      </div>
+        <div class="moon">
+          <div clas="fullmoon">
+            <div></div>
+          </div>
+          <div></div>
+          
+        </div>
+      
+        <div class="center">
+          <div><p>ASSIGN TO LIST</p></div>
+            <div class="circle">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+        </div>
+      
+      <div class="bottom">
+            <div><p>SET TIME</p></div>
+            <div><p>14:30</p></div>
+            <div><p> 17:30</p></div>
+            <div><p>18:30</p></div>
+            <div></div>
+            <div class="bar"> 
+              
+            </div>
+
+      </div>
+      
+      
+        <div class="footer">
+          <p>CREAT TASK</p>
+        </div>
+      
+      
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
