@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display(2)</title>
+  <style>
+    *{margin:0; padding:0;}
+    .container {
+      width:100vw;
+      height:100vh;
+      background-color: darkslategray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .main {
+      width:90vw;
+      height:90vh;
+      background-color: darkgray; 
+      display: flex;
+      
+
+    }
+     
+      
+     
+      
+    
+    
+    .side {
+      width:10vw;
+      height:90vh;
+      background-color: gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
+    @media (min-width:1000px) {.side { background-color: aliceblue;
+     width:90vw; height:10vh; position: fixed; top:1; display: inline; }}
+    
+    
+   @media (min-width:1000px) {.inside  {background-color: aqua; width:100vw; height:10vh;
+       margin:auto; border: 1px solid black;  flex-direction: row;}}
+    
+    
+    .inside {
+      width:8vw;
+      height:45vh;
+      background-color: darkgray;
+      margin-top: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .inside div {
+      width:7vw;
+      height:7vh;
+      /* border:2px solid black; */
+      margin:7px;
+      background-color: gray;
+    }
+   
+    .center {
+      width:90vw;
+      height:90vh;
+      /* border: 1px solid black; */
+      display: flex;
+      flex-wrap: wrap;      
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @media (min-width:1000px) {.center {flex-wrap:nowrap;}}
+    
+    
+    .center div {
+      width: 27vw;
+      height:27vh;
+      /* border: 1px solid black; */
+      margin:5px;
+      background-color: gray;
+      
+    }
+    @media (min-width:1000px) {.center div {width:10vw; height:30vh; display: flex; justify-content:space-evenly; margin:20px;}}
+    
+    
+  </style>
+  
+  
+  
+  
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+          <div></div>
+        <div class="side">
+          <div class="inside">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            
+          </div>
+        </div>
+      
+      <div class="center">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        
+      </div>
+
+        
+        
+      
+      
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+</body>
+</html>
