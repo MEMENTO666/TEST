@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    const root = document.createElement("div");
+    document.body.appendChild(root);
+    const ul = document.createElement("ul");
+    root.appendChild(ul);
+
+    
+
+    const array = [];
+    
+    
+    setTimeout(()=>{
+    },3000);
+    ul.innerHTML = "";
+    
+    for(let i=0; i < 100; i++){
+      const li = document.createElement("li");
+      ul.appendChild(li);
+    }
+    // *********DOM API 에서 지원하는 함수들을 활용한 방식, setAttribute , appendChild, createElement 등등 ************//
+    
+    
+  </script>
+
+</body>
+
+</html>

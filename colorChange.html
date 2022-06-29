@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #clock {
+      width:300px;
+      height:300px;
+      border: 1px solid black;
+      
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>clock</h1>
+
+  <script>
+    const clock = document.querySelector("h1");
+    const colorList = ["red","green","blue","yellow","orange","orangered","pink"];
+    
+    
+     function newClock() {
+       const date= new Date();
+       randomColor();
+       const minutes = date.getMinutes();
+       const hour = date.getHours();
+       const seconds = date.getSeconds();
+  
+       clock.innerHTML = `${hour < 10 ? `0${hour}` : hour}:${minutes < 10 ? `0${minutes}`: minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;}
+      
+      function randomColor() {
+        const randomBox = Math.floor(Math.random()*7);
+        clock.style.color = colorList[randomBox];
+        clock.style.transition = "0.9s";
+      }
+
+      randomColor();
+      
+      function init() {
+        newClock();
+        setInterval(newClock,1000);
+      }
+
+      init();
+ 
+    
+  </script>
+  
+  
+  
+</body>
+</html>

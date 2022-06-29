@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="root"></div>
+<body>
+  <script>
+    const createZombieComponent = () => {
+      const createCircle = (size = 40, color = '#F00', left = 0, top = 0) => {
+        const circle = document.createElement('div');
+        circle.style.width = `${size}px`;
+        circle.style.height = `${size}px`;
+        circle.style.borderRadius = `${size / 2}px`;
+        circle.style.backgroundColor = `${color}`;
+        circle.style.position = 'absolute';
+        circle.style.left = `${left}px`;
+        circle.style.top = `${top}px`;
+        return circle;
+      }
+
+      const setRotateAnimation = (target) => {
+        let degree = 0;
+
+        rotateTimer = setInterval(() => {
+          degree++;
+          if(degree === 360) {
+            degree = 0;
+          }
+          target.style.transform = `rotate(${degree}deg)`;
+        }, 50);
+
+        target.addEventListener('mouseover', () => {
+          console.log('in !!!');
+          clearInterval(rotateTimer);
+          rotateTimer = undefined;
+        });
+
+        target.addEventListener('mouseleave', () => {
+          console.log('out !!!');
+          if(!rotateTimer) {
+            rotateTimer = setInterval(() => {
+              degree++;
+              if(degree === 360) {
+                degree = 0;
+              }
+              target.style.transform = `rotate(${degree}deg)`;
+            }, 50);
+          }
+        });
+      }
+
+      const container = document.createElement('div');
+      container.style.width = '300px';
+      container.style.height = '300px';
+      container.style.backgroundColor = '#404040';
+      container.style.padding = '10%';
+      
+      const orbit = document.createElement('div');
+      orbit.style.width = '100%';
+      orbit.style.height = '100%';
+      orbit.style.borderRadius = '50%';
+      orbit.style.borderWidth = '0.5px';
+      orbit.style.borderColor = 'white';
+      orbit.style.borderStyle = 'solid';
+      orbit.style.backgroundColor = 'blue';
+
+      const circles = [
+        createCircle(80, 'red', 80, -30),
+        createCircle(80, 'red', -30, 60),
+        createCircle(80, 'red', 220, 10),
+        createCircle(80, 'yellow', -30, 190),
+        // createCircle(80, 'yellow', 0, 0),
+        // createCircle(80, 'yellow', 0, 0),
+      ];
+      
+      circles.forEach(c => {
+        orbit.appendChild(c);
+      });
+
+      setRotateAnimation(orbit);
+
+      container.appendChild(orbit);
+      return container;
+    }
+
+    const root = document.getElementById("root");
+    
+    const zombie = createZombieComponent();
+    root.appendChild(zombie);
+
+  </script>
+</body>
+</html>
